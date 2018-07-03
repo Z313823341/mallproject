@@ -1,0 +1,7 @@
+package cn.e3mall.sso.service;
+
+public interface TokenService {
+	
+	TbUser getUserByToken(String token); 
+
+}

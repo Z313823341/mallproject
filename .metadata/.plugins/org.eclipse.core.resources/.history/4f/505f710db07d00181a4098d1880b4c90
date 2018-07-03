@@ -1,0 +1,23 @@
+package cn.e3mall.order.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.e3mall.cart.service.CartService;
+
+@Controller
+public class OrderListController {
+	
+	@Autowired
+	private CartService cartService;
+	@RequestMapping("/order/order-cart")
+	public String showOrderList(){
+		//取用户id
+		
+		return "order-cat";
+	}
+	
+	
+
+}

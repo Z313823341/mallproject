@@ -1,0 +1,13 @@
+package cn.e3mall.solorj;
+
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.impl.CloudSolrServer;
+
+public class TestSolrCloud {
+	
+	public void testCloudSolr() throws Exception{
+	
+	CloudSolrServer Server = new CloudSolrServer("192.168.25.128:2182,192.168.25.128:2183,192.168.25.128:2184 ");
+	
+	}
+}

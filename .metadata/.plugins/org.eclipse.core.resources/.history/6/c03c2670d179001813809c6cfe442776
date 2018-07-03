@@ -1,0 +1,17 @@
+package cn.e3mall.sso.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class LoginInController {
+	
+	@RequestMapping("/page/login")
+	public String showloginIn(){
+		return "login";
+	}
+	
+	//把session写入cookie。设置过期时间，关闭浏览器失效
+	
+
+}

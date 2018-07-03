@@ -1,0 +1,13 @@
+package cn.e3mall.solorj;
+
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.impl.CloudSolrServer;
+
+public class TestSolrCloud {
+	
+	public void testCloudSolr() throws Exception{
+	
+	CloudSolrServer Server = new SolrServer();
+	
+	}
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=e3-search-web/C:\/maven\/repository\/org\/springframework\/spring-webmvc\/4.2.4.RELEASE\/spring-webmvc-4.2.4.RELEASE.jar&lt;org.springframework.web.servlet(HandlerExceptionResolver.class[HandlerExceptionResolver" modifiers="1537" timestamp="1463390358142"/>
+<typeInfo handle="=e3-search-web/C:\/maven\/repository\/org\/springframework\/spring-webmvc\/4.2.4.RELEASE\/spring-webmvc-4.2.4.RELEASE.jar&lt;org.springframework.web.servlet.mvc.method.annotation(ResponseBodyEmitter$Handler.class[Handler" modifiers="1544" timestamp="1463390358142"/>
+<typeInfo handle="=e3-search-service/C:\/maven\/repository\/org\/apache\/activemq\/activemq-all\/5.11.2\/activemq-all-5.11.2.jar&lt;javax.jms(MessageListener.class[MessageListener" modifiers="1537" timestamp="1529562232079"/>
+<typeInfo handle="=e3-manager-pojo/src\/main\/java&lt;cn.e3mall.pojo{TbItem.java[TbItem" modifiers="1" timestamp="1527023913847"/>
+</typeInfoHistroy>

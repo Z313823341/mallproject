@@ -1,0 +1,29 @@
+package cn.e3mall.content.service.impl;
+
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.alibaba.dubbo.config.annotation.Service;
+
+import cn.e3mall.content.service.ContentService;
+
+import cn.e3mall.mapper.TbContentMapper;
+import cn.e3mall.pojo.TbContent;
+import cn.e3mall.utils.E3Result;
+
+@Service
+public class ContentServiceImpl implements ContentService {
+	
+	@Autowired
+	 TbContentMapper contentMapper;
+
+	@Override
+	public E3Result addContent(TbContent tbContent) {
+		tbContent.setCreated(new Date());
+		tbContent.setUpdated(new Date());
+		contentMapper.insert(tbContent);
+		return E3Result.ok();
+	}
+
+}

@@ -1,0 +1,29 @@
+package cn.e3mall.order.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import cn.e3mall.mapper.TbOrderItemMapper;
+import cn.e3mall.mapper.TbOrderMapper;
+import cn.e3mall.mapper.TbOrderShippingMapper;
+import cn.e3mall.order.pojo.OrderInfo;
+import cn.e3mall.order.service.OrderService;
+import cn.e3mall.utils.E3Result;
+
+public class OrderServiceImpl implements OrderService{
+	
+	@Autowired
+	private TbOrderMapper tbOrderMapper;
+	@Autowired
+	private TbOrderItemMapper tbOrderItemMapper;
+	@Autowired
+	private TbOrderShippingMapper tbOrderShippingMapper;
+	
+	
+	@Override
+	public E3Result createOrder(OrderInfo orderInfo) {
+		// TODO Auto-generated method stub
+		//生成订单号，使用redis的incr生成
+		return null;
+	}
+
+}

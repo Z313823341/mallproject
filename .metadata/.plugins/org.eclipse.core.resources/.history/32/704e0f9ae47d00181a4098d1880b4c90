@@ -1,0 +1,18 @@
+package cn.e3mall.order.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import cn.e3mall.mapper.TbOrderItemMapper;
+import cn.e3mall.mapper.TbOrderMapper;
+import cn.e3mall.mapper.TbOrderShippingMapper;
+
+public class OrderServiceImpl implements OrderService{
+	
+	@Autowired
+	private TbOrderMapper tbOrderMapper;
+	@Autowired
+	private TbOrderItemMapper tbOrderItemMapper;
+	@Autowired
+	private TbOrderShippingMapper tbOrderShippingMapper;
+
+}

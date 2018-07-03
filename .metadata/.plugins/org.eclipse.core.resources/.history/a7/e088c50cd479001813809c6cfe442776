@@ -1,0 +1,32 @@
+package cn.e3mall.sso.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import cn.e3mall.sso.service.LoginService;
+import cn.e3mall.utils.E3Result;
+
+@Controller
+public class LoginInController {
+	
+	@Autowired
+	private LoginService loginService;
+	@RequestMapping("/page/login")
+	public String showloginIn(){
+		return "login";
+	}
+	
+	//把session写入cookie。设置过期时间，关闭浏览器失效
+	@RequestMapping(value="/user/login",method=RequestMethod.POST)
+	@ResponseBody
+	public E3Result login(String username,String password){
+		E3Result resylt = loginService.userLogin(username, password);
+		
+		return null;
+		
+	}
+
+}

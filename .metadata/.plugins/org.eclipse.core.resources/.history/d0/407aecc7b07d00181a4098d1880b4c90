@@ -1,0 +1,29 @@
+package cn.e3mall.order.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.http.HttpRequest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.e3mall.cart.service.CartService;
+import cn.e3mall.pojo.TbUser;
+
+@Controller
+public class OrderListController {
+	
+	@Autowired
+	private CartService cartService;
+	@RequestMapping("/order/order-cart")
+	public String showOrderList(HttpServletRequest request){
+		//取用户id
+		TbUser tbUser = (TbUser)request.getAttribute("user");
+		//根据用户id取购物车列表
+		cartService.getCartList(tbUser.getId());
+		return "order-cat";
+	}
+	
+	
+
+}

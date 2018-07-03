@@ -1,0 +1,9 @@
+1530147011624	Delete elements
+1530147032187	Delete element
+1530147038672	Delete elements
+1530147137359	Rename package 'cn.e3mall.cat.controller'
+1530157668198	Extract local variable 'list'
+1530172688787	Extract local variable 'list'
+1530185388312	Extract local variable 'userByToken'
+1530185548467	Extract local variable 'user'
+1530193216163	Extract local variable 'list'

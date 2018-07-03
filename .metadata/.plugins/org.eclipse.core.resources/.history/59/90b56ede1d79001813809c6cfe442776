@@ -1,0 +1,7 @@
+package cn.e3mall.sso.service;
+
+public interface RegisterService {
+	
+	E3Result checkData(String param,int type);
+
+}

@@ -1,0 +1,10 @@
+package cn.e3mall.sso.controller;
+
+/**
+ * 注册功能
+ * @author 文浩
+ *
+ */
+public class RegitsterController {
+
+}

@@ -1,0 +1,10 @@
+package cn.e3mall.content.service;
+
+import cn.e3mall.pojo.TbContent;
+import cn.e3mall.utils.E3Result;
+
+public interface ContentService {
+	
+	E3Result addContent(TbContent content);
+
+}

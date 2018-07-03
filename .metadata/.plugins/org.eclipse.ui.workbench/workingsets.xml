@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1527021739321_1" label="e3-manager" name="e3-manager">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/e3-manager-service" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/e3-manager-pojo" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/e3-manager-interface" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/e3-manager-dao" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1528885321751_2" label="e3-content" name="e3-content">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/e3-content" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1529981554779_3" label="e3-item-web" name="e3-item-web">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/e3-item-web" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1527021651118_0" label="Window Working Set" name="Aggregate for window 1527021651118"/>
+</workingSetManager>

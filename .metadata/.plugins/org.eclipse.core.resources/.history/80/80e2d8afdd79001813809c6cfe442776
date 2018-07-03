@@ -1,0 +1,15 @@
+package cn.e3mall.sso.service.impl;
+
+import cn.e3mall.pojo.TbUser;
+import cn.e3mall.sso.service.TokenService;
+import cn.e3mall.utils.E3Result;
+
+public class TokenServiceImpl implements TokenService {
+
+	@Override
+	public E3Result getUserByToken(String token) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

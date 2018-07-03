@@ -1,0 +1,19 @@
+package cn.e3mall.solorj;
+
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.impl.CloudSolrServer;
+
+public class TestSolrCloud {
+	
+	public void testCloudSolr() throws Exception{
+	//搜索系统集群的连接，应该使用cloudsolrserver创建
+	CloudSolrServer Server = new CloudSolrServer("192.168.25.128:2182,192.168.25.128:2183,192.168.25.128:2184 ");
+	//zkhost：zookeeper的地址列表
+	//设置一个defaultCollection的属性
+	Server.setDefaultCollection("collection2");
+	//创建一个文档对象
+	//像文档中添加域
+	//将文件提交到索引库
+	
+	}
+}

@@ -1,0 +1,56 @@
+package cn.e3mall.cart.service.impl;
+
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+import cn.e3mall.cart.service.CartService;
+import cn.e3mall.common.jedis.JedisClient;
+
+import cn.e3mall.mapper.TbItemMapper;
+import cn.e3mall.pojo.TbItem;
+import cn.e3mall.utils.E3Result;
+import cn.e3mall.utils.JsonUtils;
+
+/**
+ * 购物车处理服务
+ * <p>Title: CartServiceImpl</p>
+ * <p>Description: </p>
+ * <p>Company: www.itcast.cn</p> 
+ * @version 1.0
+ */
+@Service
+public class CartServiceImpl implements CartService {
+
+	@Autowired
+	private JedisClient client;
+	@Value("${REDIS_cART_PRE}")
+	private String REDIS_cART_PRE;
+	@Autowired
+	private TbItemMapper mapper;
+	
+	@Override
+	public E3Result addCart(long userId, long itemId,int num) {
+		//判断商品是否存在redis中，如果存在数量相加,向redis中更新商品信息
+		//如果不存在，向redis中添加商品信息
+		Boolean boo = client.hexists(REDIS_cART_PRE+":"+userId,itemId+"");
+		if(boo){
+			String json = client.hget(REDIS_cART_PRE+":"+userId,itemId+"");
+			TbItem item = JsonUtils.jsonToPojo(json, TbItem.class);
+			System.out.println(item.getNum());
+			item.setNum(item.getNum()+num);
+			//写入redis
+			client.hset(REDIS_cART_PRE+":"+userId, itemId+"", JsonUtils.objectToJson(item));
+			return E3Result.ok();
+		}
+		TbItem item = 
+		 client.hset(REDIS_cART_PRE+":"+userId,  itemId+"", value)
+		return null;
+	}
+
+	
+	
+
+}

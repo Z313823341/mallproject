@@ -1,0 +1,3 @@
+1530004619147	Rename type 'RegisterServerImpl'
+1530078755138	Extract local variable 'criteria'
+1530078851259	Extract local variable 'list'

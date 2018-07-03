@@ -1,0 +1,79 @@
+		package cn.e3mall.content.service.impl;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cn.e3mall.common.pojo.EasyUITreeNode;
+import cn.e3mall.content.service.ContentCategoryService;
+import cn.e3mall.mapper.TbContentCategoryMapper;
+import cn.e3mall.pojo.TbContentCategory;
+import cn.e3mall.pojo.TbContentCategoryExample;
+import cn.e3mall.pojo.TbContentCategoryExample.Criteria;
+import cn.e3mall.utils.E3Result;
+ 
+
+@Service
+public class ContentCategoryServiceImpl implements ContentCategoryService{
+	
+	@Autowired
+	private TbContentCategoryMapper categoryMapper;
+	
+	@Override
+	public List<EasyUITreeNode> getContentCatList(long parentId) {
+		//根据parentId查询子节点列表
+			TbContentCategoryExample example = new TbContentCategoryExample();
+			Criteria criteria = example.createCriteria();
+				
+			//设置查询条件
+			criteria.andParentIdEqualTo(parentId);
+				
+			//执行查询
+			List<TbContentCategory> list = categoryMapper.selectByExample(example);
+			
+			//创建结果返回list
+			List<EasyUITreeNode> result = new ArrayList<>();
+			for (TbContentCategory tbContentCategory : list) {
+				EasyUITreeNode node = new EasyUITreeNode();
+				node.setId(tbContentCategory.getId());
+				node.setText(tbContentCategory.getName());
+				node.setState(tbContentCategory.getIsParent()?"closed":"open");
+				result.add(node);
+			}
+			return result;
+	}
+
+	@Override
+	
+	//增加节点
+	public E3Result addContentCategory(long parentId, String name) {
+		//创建一个content——Categort的pojo对象
+		TbContentCategory tbContentCategory = new TbContentCategory();
+		//创建pojo对象
+		tbContentCategory.setParentId(parentId);
+		tbContentCategory.setName(name);
+		//1正常，2删除
+		tbContentCategory.setStatus(1);
+		//默认排序就是1
+		tbContentCategory.setSortOrder(1);
+		tbContentCategory.setCreated(new Date());
+		tbContentCategory.setUpdated(new Date()); 
+		//新添加的节点一定是叶子节点
+		tbContentCategory.setIsParent(false);
+		//插入到数据库
+		categoryMapper.insert(tbContentCategory);
+		//判断父节点的属性
+		//根据父节点parentId查询父节点
+		TbContentCategory parent = categoryMapper.selectByPrimaryKey(parentId);
+		if(!parent.getIsParent()){
+			parent.setIsParent(true);
+			//更新到数据库
+			categoryMapper.updateByPrimaryKey(parent);
+		}
+		return E3Result.ok(tbContentCategory);
+	}
+
+}

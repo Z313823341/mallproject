@@ -1,0 +1,10 @@
+1529506812653	Extract local variable 'createConnection'
+1529507109677	Extract local variable 'createQueue'
+1529507304426	Extract local variable 'createProducer'
+1529507575561	Extract local variable 'createConnection'
+1529507646061	Extract local variable 'createSession'
+1529507965574	Extract local variable 'createProducer'
+1529563960060	Extract local variable 'connection'
+1529564099258	Extract local variable 'session'
+1529564372217	Extract local variable 'message'
+1529587272304	Copy file

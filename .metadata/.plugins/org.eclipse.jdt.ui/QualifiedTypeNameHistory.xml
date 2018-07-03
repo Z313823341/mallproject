@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="javax.jms.ConnectionFactory"/>
+<fullyQualifiedTypeName name="org.apache.activemq.ActiveMQConnectionFactory"/>
+<fullyQualifiedTypeName name="javax.jms.MessageConsumer"/>
+<fullyQualifiedTypeName name="javax.jms.MessageListener"/>
+<fullyQualifiedTypeName name="cn.e3mall.utils.FastDFSClient"/>
+<fullyQualifiedTypeName name="cn.e3mall.utils.E3Result"/>
+<fullyQualifiedTypeName name="org.apache.activemq.command.ActiveMQTextMessage"/>
+<fullyQualifiedTypeName name="java.util.jar.JarException"/>
+<fullyQualifiedTypeName name="org.springframework.jms.JmsException"/>
+<fullyQualifiedTypeName name="javax.jms.JMSException"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.jms.TextMessage"/>
+<fullyQualifiedTypeName name="cn.e3mall.search.mapper.ItemMapper"/>
+<fullyQualifiedTypeName name="cn.e3mall.common.pojo.SearchItem"/>
+<fullyQualifiedTypeName name="org.apache.solr.client.solrj.SolrServer"/>
+<fullyQualifiedTypeName name="org.apache.solr.common.SolrInputDocument"/>
+<fullyQualifiedTypeName name="org.springframework.jms.core.JmsTemplate"/>
+<fullyQualifiedTypeName name="javax.annotation.Resource"/>
+<fullyQualifiedTypeName name="javax.jms.Destination"/>
+<fullyQualifiedTypeName name="org.springframework.jms.core.MessageCreator"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="cn.e3mall.service.ItemService"/>
+<fullyQualifiedTypeName name="cn.e3mall.item.pojo.Item"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="cn.e3mall.common.jedis.JedisClient"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbItemExample"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbItemExample.Criteria"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="org.springframework.util.StringUtils"/>
+<fullyQualifiedTypeName name="com.alibaba.druid.util.StringUtils"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
+<fullyQualifiedTypeName name="cn.e3mall.utils.JsonUtils"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbItem"/>
+<fullyQualifiedTypeName name="cn.e3mall.pojo.TbItemDesc"/>
+</qualifiedTypeNameHistroy>

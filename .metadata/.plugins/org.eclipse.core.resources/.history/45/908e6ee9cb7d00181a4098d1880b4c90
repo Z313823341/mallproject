@@ -1,0 +1,40 @@
+package cn.e3mall.order.intercepter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+import cn.e3mall.utils.CookieUtils;
+
+public class LoginInterceptor implements HandlerInterceptor{
+
+	@Override
+	public void afterCompletion(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception arg3)
+			throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void postHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, ModelAndView arg3)
+			throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+		//从cookies中取token，若没取到，未登陆状态，
+		//跳转到sso的登陆页面，用户登陆成功后，跳转到当前请求的url
+		String token = CookieUtils.getCookieValue(request, "token");
+		if(StringUtils.isBlank(token)){
+			response.sendRedirect("http://local:8088/page/login?redirct="+request.getRequestURI());
+		}
+
+		return false;
+	}
+
+}

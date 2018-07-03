@@ -1,0 +1,15 @@
+package cn.e3mall.content.service.impl;
+
+import cn.e3mall.content.service.ContentService;
+import cn.e3mall.pojo.TbContent;
+import cn.e3mall.utils.E3Result;
+
+public class ContentServiceImpl implements ContentService {
+
+	@Override
+	public E3Result addContent(TbContent content) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

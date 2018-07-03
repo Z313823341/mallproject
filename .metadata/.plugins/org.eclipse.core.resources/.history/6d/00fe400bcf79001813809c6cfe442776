@@ -1,0 +1,46 @@
+package cn.e3mall.sso.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cn.e3mall.common.jedis.JedisClient;
+import cn.e3mall.mapper.TbUserMapper;
+import cn.e3mall.pojo.TbUser;
+import cn.e3mall.pojo.TbUserExample;
+import cn.e3mall.pojo.TbUserExample.Criteria;
+import cn.e3mall.sso.service.LoginService;
+import cn.e3mall.utils.E3Result;
+
+/**
+ * 1.判断用户名密码是否正确
+ * 2.不正确 登陆失败
+ * 3.正确 生成token
+ * 4.把用户信息写入redis
+ * 5.设置redis的过期时间
+ * 6.把token返回给表现层
+ * 7.
+ */
+@Service
+public class LoginServiceImpl implements LoginService {
+
+	@Autowired
+	private TbUserMapper tbUserMapper;
+	@Autowired
+	private JedisClient jedisClient;
+	@Override
+	public E3Result userLogin(String username, String password) {
+		TbUserExample example = new TbUserExample();
+		Criteria criteria = example.createCriteria();
+		criteria.andUsernameEqualTo(username);
+		//执行查询
+		List<TbUser> list = tbUserMapper.selectByExample(example);
+		if(list==null || list.size()<0){
+			return E3Result.build(400, "用户名或密码错误");
+		}
+		list.get(0);
+		return null;
+	}
+
+}

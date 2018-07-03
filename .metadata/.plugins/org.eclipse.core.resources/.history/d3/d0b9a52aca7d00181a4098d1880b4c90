@@ -1,0 +1,7 @@
+package cn.e3mall.order.intercepter;
+
+import org.springframework.web.servlet.HandlerInterceptor;
+
+public class LoginInterceptor implements HandlerInterceptor{
+
+}
